@@ -44,7 +44,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres://localhost/proyecto_final",
+        default="postgres://qujweere:CmfFQcUChI0fovMXKW716KM01sJPqu3l@chunee.db.elephantsql.com/qujweere",
     ),
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -85,6 +85,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "proyecto_final.users",
+    "proyecto_final.muestro",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

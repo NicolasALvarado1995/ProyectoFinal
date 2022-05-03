@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+    {%if message%}
+        <h1>{{message}}</h1>
+    {%endif%}
+
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    {%if form%}
+    <input type="submit" value = "iniciar sesion"/>
+    {%endif%}
+</form>
+</body>
+</html>

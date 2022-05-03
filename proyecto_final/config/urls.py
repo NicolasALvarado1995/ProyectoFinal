@@ -6,9 +6,12 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
+from proyecto_final.muestro.views import  HomeView, UsuarioCreate,EditarView,borrarview,Registerview,LoginView
+
+
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("", HomeView.as_view(), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
@@ -17,6 +20,12 @@ urlpatterns = [
     # User management
     path("users/", include("proyecto_final.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    path("agregar/", UsuarioCreate.as_view(), name='agregar '),
+    path("editar/<int:pk>", EditarView.as_view(), name='editar'),
+    path("borrar/<int:pk>", borrarview.as_view(), name='borrar'),
+    path("registro/",Registerview.as_view(), name='registro'),
+    path("login/",LoginView.as_view(), name='login'),#PF
+    
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
