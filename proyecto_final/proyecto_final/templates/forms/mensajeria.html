@@ -1,0 +1,12 @@
+{% extends 'index/index.html' %}
+{% block contenido %}
+
+ <form method="POST">
+     {%csrf_token%}
+     <table>
+         {{form.as_p}}
+     </table>
+    <input type='submit' value='Enviar Mensaje'>    
+    </form>
+
+{% endblock contenido %}

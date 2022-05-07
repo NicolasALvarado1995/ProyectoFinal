@@ -1,15 +1,8 @@
-<!doctype html>
-<html>
-<head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-</head>
-<body>
- <form  method="POST">
-     {%csrf_token%}
-     <th>¿Estas seguro de que queres borrar?</th>{{object}}"
-    <input type='submit' value='Borrar'>    
-    </form>
-</body>
-</html>
+{% extends 'index/index.html' %}
+{% block contenido %}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='enviar'>
+    
+{% endblock contenido %}

@@ -1,13 +1,17 @@
-<!doctype html>
-<html>
-<head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-</head>
-<body>
+{% extends 'index/index.html' %}
+{% block contenido %}
     Bienvenido a mi blog
-    a cuntinuacion tendra un listado de las diferentes opciones que puede hacer con una breve descripcion 
+    acuntinuacion tendra un listado de las diferentes opciones que puede hacer con una breve descripcion
+    <br>
+    login
+    <br>
+    registro
+    <br>
+    editar usuario
+    <br>
+    entrada
+    <br>
+    mensajeria
 
     {% if entradas %}
         {% for entrada in entradas %}
@@ -16,5 +20,4 @@
           </div>
         {% endfor %}
       {% endif %}
-</body>
-</html>
+{% endblock contenido %}

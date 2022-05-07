@@ -1,17 +1,10 @@
-<!doctype html>
-<html>
-<head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-</head>
-<body>
- <form  method="POST">
-     {%csrf_token%}
-     <table>
-         {{form.as_p}}
-     </table>
-    <input type='submit' value='enviar'>    
-    </form>
-</body>
-</html>
+{% extends 'index/index.html' %}
+{% block contenido %}
+<form method="POST">
+    {%csrf_token%}
+    <table>
+        {{form.as_p}}
+    </table>
+   <input type='submit' value='enviar'>    
+   </form>
+{% endblock contenido %}

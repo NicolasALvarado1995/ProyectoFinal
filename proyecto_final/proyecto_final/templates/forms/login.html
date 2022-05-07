@@ -1,11 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-</head>
-<body>
+{% extends 'index/index.html' %}
+{% block contenido %}
     {%if message%}
         <h1>{{message}}</h1>
     {%endif%}
@@ -17,5 +11,4 @@
     <input type="submit" value = "iniciar sesion"/>
     {%endif%}
 </form>
-</body>
-</html>
+{% endblock contenido %}
