@@ -2,11 +2,16 @@ from django.contrib import admin
 from django.contrib.auth import admin as auth_admin
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
+from proyecto_final.muestro.models import avatar
+
 
 from proyecto_final.users.forms import UserAdminChangeForm, UserAdminCreationForm
 
 User = get_user_model()
 
+@admin.register(avatar)
+class AvatarAdmin(admin.ModelAdmin):
+    pass
 
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):

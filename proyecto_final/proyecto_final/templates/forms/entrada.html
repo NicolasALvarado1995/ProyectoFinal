@@ -2,22 +2,7 @@
 {% block contenido %}
 <form method="POST">
      {%csrf_token%}
-     <label>
-         Titulo
-         <input type="text" name="titulo"/>
-         <br>
-         <br>
-         SubTitulo
-         <input type="text" name="SubTitulo"/>
-         <br>
-         <br>
-         Fecha
-         <input type="date" id="start" name="trip-start"
-         value="2018-07-22"
-         min="2018-01-01" max="2018-12-31">
-         <p><textarea name="comentario" rows="5" cols="50"></textarea></p>
-         
-     </label>
+
      <table>
          {{form.as_p}}
      </table>

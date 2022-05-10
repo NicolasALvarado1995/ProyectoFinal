@@ -25,20 +25,21 @@ tr:nth-child(even) {
 
 <table>
   <tr>
+    <th>id</th>
     <th>Nombre</th>
     <th>Mail</th>
     <th>modificar</th>
-    mensaje
+    
   </tr>
 {% for element in elements %}
   <tr>
+    <td>{{element.id}}</td>
     <td>{{element.username}} {{element.lastname}}</td>
     <td>{{element.email}}</td>
-    <td><a href="/editar.html">Edit</a></td>
+    <td><a href="editar/{{element.id}}">Edit</a></td>
   </tr>
 {% endfor %}
 
 </table>
-
 </body>
 </html>

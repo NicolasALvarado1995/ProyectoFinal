@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+        Formulario editar v2
+        <h1>  {{User.username}} {{User.email}} </h1>
+
+        <form action="" method"POST">
+            {% csrf_token %}
+            {{form.as_table}}
+            <input type="submit" value="enviar">
+            
+</body>
+</html>

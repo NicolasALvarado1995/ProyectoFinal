@@ -14,10 +14,10 @@
     mensajeria
 
     {% if entradas %}
-        {% for entrada in entradas %}
-          <div>
-            {{ entrada.mensaje }}
-          </div>
-        {% endfor %}
-      {% endif %}
+      {% for entrada in entradas %}
+        <div>
+          {{ entrada.mensaje }}
+        </div>
+      {% endfor %}
+    {% endif %}
 {% endblock contenido %}

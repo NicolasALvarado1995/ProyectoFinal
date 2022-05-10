@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+    {% if mensajes %}
+      {% for mensaje in mensajes %}
+        <div>
+          De: {{ mensaje.de }}<br>
+          Mensaje: {{ mensaje.mensaje }}<br>
+          Fecha: {{ mensaje.fecha }}<br>
+        </div>
+        <hr>
+      {% endfor %}
+    {% endif %}
+</body>
+</html>

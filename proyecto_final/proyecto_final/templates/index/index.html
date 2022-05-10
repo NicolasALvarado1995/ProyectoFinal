@@ -21,9 +21,16 @@
 
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="btn btn-primary" href="">Sign Up</a>
-                <a class="btn btn-primary" href="">Sign Up</a>
-                <a class="btn btn-primary" href="">Sign Up</a>
+                <a class="btn btn-primary" href="/mensajeria">mensajes</a>
+                <a class="btn btn-primary" href="/">home</a>
+                {%if request.user.is.autenticated%}
+                <a>{{request.user.username}}</a>
+                {% else %}
+
+                    <a class="btn btn-primary" href="/login">iniciar sesion</a>
+                {%endif%}
+                    
+
             </div>
         </nav>
         <!-- Masthead-->
