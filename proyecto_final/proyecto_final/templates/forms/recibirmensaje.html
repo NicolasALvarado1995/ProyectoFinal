@@ -1,11 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<title>Our Funky HTML Page</title>
-<meta name="description" content="Our first page">
-<meta name="keywords" content="html tutorial template">
-</head>
-<body>
+{% extends 'index/index.html' %}
+{% block contenido %}
     {% if mensajes %}
       {% for mensaje in mensajes %}
         <div>
@@ -16,5 +10,4 @@
         <hr>
       {% endfor %}
     {% endif %}
-</body>
-</html>
+  {% endblock contenido %}
